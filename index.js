@@ -8,6 +8,7 @@ app.use(cors())
 app.use(express.json())
 
 app.use('/api/clientes', require('./routes/clientes'))
+app.use('/api/auth', require('./routes/auth'))
 
 mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
